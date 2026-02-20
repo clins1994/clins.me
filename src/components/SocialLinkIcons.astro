@@ -1,0 +1,64 @@
+---
+import { EMAIL, HANDLE } from '../../astro.config.mjs'
+import HeaderLink from './HeaderLink.astro'
+import GitHub from './IconGitHub.astro'
+import Gmail from './IconGmail.astro'
+import LinkedIn from './IconLinkedIn.astro'
+
+interface Props {
+  compact?: boolean
+}
+
+const { compact = false } = Astro.props
+---
+
+<ul class="m-0 flex list-none flex-wrap gap-3 p-0" aria-label="Social links">
+  <li>
+    <HeaderLink
+      class:list={[
+        'inline-flex items-center justify-center rounded-full text-stone-600 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500/60',
+        compact
+          ? 'h-8 w-8 border border-transparent bg-transparent shadow-none hover:border-stone-300/75 hover:bg-stone-50 [&>svg]:h-[1.05rem] [&>svg]:w-[1.05rem]'
+          : 'h-10 w-10 border border-stone-300/75 bg-stone-50 shadow-[0_14px_60px_rgba(30,27,22,0.12)] hover:border-orange-500 hover:text-orange-600 [&>svg]:h-5 [&>svg]:w-5'
+      ]}
+      href={`https://www.linkedin.com/in/${HANDLE}`}
+      target="_blank"
+      aria-label="LinkedIn"
+      rel="noreferrer"
+    >
+      <LinkedIn />
+    </HeaderLink>
+  </li>
+  <li>
+    <HeaderLink
+      class:list={[
+        'inline-flex items-center justify-center rounded-full text-stone-600 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500/60',
+        compact
+          ? 'h-8 w-8 border border-transparent bg-transparent shadow-none hover:border-stone-300/75 hover:bg-stone-50 [&>svg]:h-[1.05rem] [&>svg]:w-[1.05rem]'
+          : 'h-10 w-10 border border-stone-300/75 bg-stone-50 shadow-[0_14px_60px_rgba(30,27,22,0.12)] hover:border-orange-500 hover:text-orange-600 [&>svg]:h-5 [&>svg]:w-5'
+      ]}
+      href={`https://github.com/${HANDLE}`}
+      target="_blank"
+      aria-label="GitHub"
+      rel="noreferrer"
+    >
+      <GitHub />
+    </HeaderLink>
+  </li>
+  <li>
+    <HeaderLink
+      class:list={[
+        'inline-flex items-center justify-center rounded-full text-stone-600 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500/60',
+        compact
+          ? 'h-8 w-8 border border-transparent bg-transparent shadow-none hover:border-stone-300/75 hover:bg-stone-50 [&>svg]:h-[1.05rem] [&>svg]:w-[1.05rem]'
+          : 'h-10 w-10 border border-stone-300/75 bg-stone-50 shadow-[0_14px_60px_rgba(30,27,22,0.12)] hover:border-orange-500 hover:text-orange-600 [&>svg]:h-5 [&>svg]:w-5'
+      ]}
+      href={`mailto:${EMAIL}`}
+      target="_blank"
+      aria-label="Email"
+      rel="noreferrer"
+    >
+      <Gmail />
+    </HeaderLink>
+  </li>
+</ul>

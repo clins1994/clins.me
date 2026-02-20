@@ -1,13 +1,14 @@
 ---
-const today = new Date();
+import { FULL_NAME } from '../consts'
+import SocialLinkIcons from './SocialLinkIcons.astro'
+const today = new Date()
 ---
 
-<footer>
-	&copy; {today.getFullYear()} YOUR NAME HERE. All rights reserved.
+<footer class="grid gap-4 border-t border-stone-300/70 pt-8 text-stone-500">
+  <div>
+    <SocialLinkIcons compact />
+  </div>
+  <p class="m-0 text-sm">
+    &copy; {today.getFullYear()} {FULL_NAME}. All rights reserved.
+  </p>
 </footer>
-<style>
-	footer {
-		padding: 25px;
-		text-align: center;
-	}
-</style>

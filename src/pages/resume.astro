@@ -1,0 +1,28 @@
+---
+import BaseHead from '../components/BaseHead.astro'
+import { FULL_NAME } from '../consts'
+import ResumeContent from '../content/resume.md'
+
+const pageTitle = `${FULL_NAME} | Resume`
+const pageDescription = `Resume for ${FULL_NAME}`
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={pageTitle} description={pageDescription} />
+  </head>
+  <body class="min-h-screen bg-gradient-to-br from-stone-100 via-amber-50 to-orange-100 text-stone-900">
+    <main class="mx-auto w-full max-w-5xl px-4 py-8 sm:px-8 sm:py-12">
+      <article
+        class="rounded-3xl border border-stone-300/75 bg-stone-50/95 p-5 shadow-2xl shadow-stone-900/10 backdrop-blur-sm sm:p-10 print:rounded-none print:border-none print:bg-white print:p-0 print:shadow-none"
+      >
+        <div
+          class="resume-prose prose prose-stone max-w-none prose-headings:font-semibold prose-headings:text-stone-900 prose-h1:mb-1 prose-h1:text-5xl prose-h1:tracking-tight prose-h2:mt-10 prose-h2:border-t prose-h2:border-stone-300/70 prose-h2:pt-5 prose-h2:text-xl prose-h2:uppercase prose-h2:tracking-[0.14em] prose-h2:text-stone-500 prose-h3:mb-1 prose-h3:text-base prose-h3:text-stone-900 prose-p:my-1 prose-p:text-stone-700 prose-a:text-orange-600 prose-a:no-underline prose-a:decoration-2 prose-a:underline-offset-2 hover:prose-a:underline prose-ul:my-3 prose-ul:space-y-1 prose-li:text-stone-700 sm:prose-h1:text-6xl print:prose-sm print:prose-h1:text-4xl print:prose-h2:mt-6 print:prose-h2:pt-3 print:prose-h2:text-base print:prose-h3:text-sm print:prose-p:my-0.5 print:prose-ul:my-1 print:pb-4"
+        >
+          <ResumeContent />
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

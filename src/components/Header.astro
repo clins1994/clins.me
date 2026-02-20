@@ -1,25 +1,50 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+import { FULL_NAME, PROFILE } from '../consts'
+import SocialLinkIcons from './SocialLinkIcons.astro'
 ---
 
-<header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
-	</nav>
+<header class="relative lg:sticky lg:top-0 lg:min-h-screen lg:self-start lg:pt-24">
+  <div class="flex flex-col gap-10">
+    <div>
+      <p class="mb-2 text-xs uppercase tracking-[0.35em] text-stone-500">{PROFILE.title}</p>
+      <h1 class="mb-2 text-[clamp(2.3rem,4vw,3.5rem)] leading-[1.05]">{FULL_NAME}</h1>
+      <p class="mb-3 font-semibold">{PROFILE.location}</p>
+      <p class="max-w-[28ch] text-stone-600">{PROFILE.tagline}</p>
+      <nav class="mt-8 grid gap-3" aria-label="In-page jump links">
+        <a
+          class="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-stone-600 transition-colors hover:text-stone-900 focus-visible:text-stone-900 [&[aria-current=true]]:text-stone-900 before:block before:h-px before:w-5 before:bg-stone-400 before:transition-all before:duration-200 hover:before:w-12 hover:before:bg-orange-600 focus-visible:before:w-12 focus-visible:before:bg-orange-600 [&[aria-current=true]]:before:w-12 [&[aria-current=true]]:before:bg-orange-600"
+          data-nav
+          aria-current="false"
+          href="#about"
+        >
+          About
+        </a>
+        <a
+          class="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-stone-600 transition-colors hover:text-stone-900 focus-visible:text-stone-900 [&[aria-current=true]]:text-stone-900 before:block before:h-px before:w-5 before:bg-stone-400 before:transition-all before:duration-200 hover:before:w-12 hover:before:bg-orange-600 focus-visible:before:w-12 focus-visible:before:bg-orange-600 [&[aria-current=true]]:before:w-12 [&[aria-current=true]]:before:bg-orange-600"
+          data-nav
+          aria-current="false"
+          href="#experience"
+        >
+          Experience
+        </a>
+        <a
+          class="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-stone-600 transition-colors hover:text-stone-900 focus-visible:text-stone-900 [&[aria-current=true]]:text-stone-900 before:block before:h-px before:w-5 before:bg-stone-400 before:transition-all before:duration-200 hover:before:w-12 hover:before:bg-orange-600 focus-visible:before:w-12 focus-visible:before:bg-orange-600 [&[aria-current=true]]:before:w-12 [&[aria-current=true]]:before:bg-orange-600"
+          data-nav
+          aria-current="false"
+          href="#projects"
+        >
+          Projects
+        </a>
+        <a
+          class="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-stone-600 transition-colors hover:text-stone-900 focus-visible:text-stone-900 [&[aria-current=true]]:text-stone-900 before:block before:h-px before:w-5 before:bg-stone-400 before:transition-all before:duration-200 hover:before:w-12 hover:before:bg-orange-600 focus-visible:before:w-12 focus-visible:before:bg-orange-600 [&[aria-current=true]]:before:w-12 [&[aria-current=true]]:before:bg-orange-600"
+          href="/resume"
+        >
+          Resume
+        </a>
+      </nav>
+    </div>
+    <div>
+      <SocialLinkIcons />
+    </div>
+  </div>
 </header>
-<style>
-	header {
-		margin: 0em 0 2em;
-	}
-	h2 {
-		margin: 0.5em 0;
-	}
-</style>

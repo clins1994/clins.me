@@ -1,0 +1,8 @@
+---
+import { EMAIL, HANDLE } from '../../astro.config.mjs'
+import HeaderLink from './HeaderLink.astro'
+---
+
+<HeaderLink href={`https://linkedin.com/in/${HANDLE}`} target="_blank">LinkedIn</HeaderLink>
+<HeaderLink href={`https://github.com/${HANDLE}`} target="_blank">GitHub</HeaderLink>
+<HeaderLink href={`mailto:${EMAIL}`} target="_blank">Email</HeaderLink>
