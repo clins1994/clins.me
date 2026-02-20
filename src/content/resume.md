@@ -1,6 +1,6 @@
 # Caio Lins
 
-[hi@clins.me](mailto:hi@clins.me) ▪ [github.com/clins1994](https://github.com/clins1994) ▪  [linkedin.com/in/clins1994](https://www.linkedin.com/in/clins1994/)
+[clins.me](https://clins.me/) ▪ [hi@clins.me](mailto:hi@clins.me) ▪ [github.com/clins1994](https://github.com/clins1994) ▪ [linkedin.com/in/clins1994](https://www.linkedin.com/in/clins1994/)
 
 ## Employment
 
