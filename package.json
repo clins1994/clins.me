@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "prettier": "prettier --write .",
-    "export:resume:pdf": "pnpm exec puppeteer browsers install chrome && pnpm exec md-to-pdf src/content/resume.md && mv src/content/resume.pdf tmp/resume.pdf"
+    "export:resume:pdf": "pnpm exec puppeteer browsers install chrome && pnpm exec md-to-pdf src/content/resume.md && mv src/content/resume.pdf tmp/resume.pdf",
+    "sync:experience": "node scripts/sync-experience-from-resume.mjs && pnpm exec prettier --write src/data/experience.ts"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
