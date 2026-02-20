@@ -1,4 +1,4 @@
-import { FIRST_NAME, LAST_NAME } from "../astro.config.mjs"
+import { FIRST_NAME, LAST_NAME } from '../astro.config.mjs'
 
 export const FULL_NAME = `${FIRST_NAME} ${LAST_NAME}`
 export const SITE_DESCRIPTION = `Welcome to ${FIRST_NAME}'s website!`
